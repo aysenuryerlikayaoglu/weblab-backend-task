@@ -39,7 +39,7 @@ func getEvents(c *gin.Context) {
 	mu.RLock()
 	defer mu.RUnlock()
 
-	var result []Event
+	result :=[]Event{}
 	for _, e := range events {
 		if city == "" || e.City == city {
 			result = append(result, *e)
